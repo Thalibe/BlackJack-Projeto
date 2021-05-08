@@ -38,27 +38,33 @@ namespace BlackJack
              */
 
 
-            if ( pontos_A < pontos_B  &&  pontos_A <= 21  )
+             if (pontos_A > pontos_B && pontos_A <= 21)
             {
                 lbl_Resultado.Text = "Jogador 1 GANHOU!";
-                lbl_Resultado.ForeColor = Color.Green;
             }
             else
-                if ( pontos_B < pontos_A  && pontos_B <= 21 )
-            {
-                lbl_Resultado.Text = "Jogador 2 GANHOU!";
-                lbl_Resultado.ForeColor = Color.Green;
-            }
+                if (pontos_B > pontos_A && pontos_B <= 21)
+                {
+                    lbl_Resultado.Text = "Jogador 2 GANHOU!";
+                }
             else
-               if (pontos_A <= pontos_B || pontos_B <= pontos_A)
+                if (pontos_A <= 21 && pontos_B <= 21)
+                {
+                    lbl_Resultado.Text = "EMPATE";
+                }
+            else
+                if (pontos_A > 21 && pontos_B <= 21)
+                {
+                    lbl_Resultado.Text = "Jogador 2 GANHOU!";
+                }
+            else
+                if (pontos_B > 21 && pontos_A <= 21)
             {
-                lbl_Resultado.Text = "EMPATE";
-                lbl_Resultado.ForeColor = Color.Blue;
+                lbl_Resultado.Text = "Jogador 1 GANHOU!";
             }
             else
             {
                 lbl_Resultado.Text = "SEM VENCEDOR.";
-                lbl_Resultado.ForeColor = Color.Red;
             }
 
         }
