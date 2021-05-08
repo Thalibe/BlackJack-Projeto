@@ -41,30 +41,36 @@ namespace BlackJack
              if (pontos_A > pontos_B && pontos_A <= 21)
             {
                 lbl_Resultado.Text = "Jogador 1 GANHOU!";
+                lbl_Resultado.ForeColor = Color.Green;
             }
             else
                 if (pontos_B > pontos_A && pontos_B <= 21)
                 {
                     lbl_Resultado.Text = "Jogador 2 GANHOU!";
-                }
+                    lbl_Resultado.ForeColor = Color.Green;
+            }
             else
                 if (pontos_A <= 21 && pontos_B <= 21)
                 {
                     lbl_Resultado.Text = "EMPATE";
-                }
+                    lbl_Resultado.ForeColor = Color.Blue;
+            }
             else
                 if (pontos_A > 21 && pontos_B <= 21)
                 {
                     lbl_Resultado.Text = "Jogador 2 GANHOU!";
-                }
+                    lbl_Resultado.ForeColor = Color.Green;
+            }
             else
                 if (pontos_B > 21 && pontos_A <= 21)
             {
                 lbl_Resultado.Text = "Jogador 1 GANHOU!";
+                lbl_Resultado.ForeColor = Color.Green;
             }
             else
             {
                 lbl_Resultado.Text = "SEM VENCEDOR.";
+                lbl_Resultado.ForeColor = Color.Red;
             }
 
         }
@@ -145,8 +151,8 @@ namespace BlackJack
             lbl_Pontos_B.Text = "0";
             lbl_Resultado.Text = "";
 
-            pictureBox1.Image = Properties.Resources._0;
-            pictureBox2.Image = Properties.Resources._0;
+           pictureBox1.Image = Properties.Resources.banner;
+           pictureBox2.Image = Properties.Resources.banner;
 
         }
 
